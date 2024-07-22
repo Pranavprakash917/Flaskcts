@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Actions</th>
+        </tr>
+        {% for i in data %}
+        <tr>
+            <td>{{i[0]}}</td>
+            <td>{{i[1]}}</td>
+            <td>{{i[2]}}</td>
+            <td><button><a href="delete/{{i[0]}}">DELETE</a></button></td>
+            <td><button><a href="update/{{i[0]}}">UPDATE</a></button></td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
